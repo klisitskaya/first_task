@@ -853,12 +853,13 @@ textarea, select {
 .profit_content{
     display: flex;
     margin-top: 60px;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .profit_content_item {
     text-align: center;
     cursor: pointer;
+    width: 400px;
 }
 
 .post {
