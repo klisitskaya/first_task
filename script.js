@@ -54,3 +54,54 @@ function showContent() {
     }
 }
 showContent();
+
+const advantages = document.querySelectorAll('.advantage');
+
+function showInfoAdvantage() {
+    for (item of advantages) {
+        item.addEventListener('click', function() {
+            if (this.classList.contains('active_')) {
+                this.classList.remove('active_');
+            } else {
+                for(elem of profitContentItem) {
+                    elem.classList.remove('active_');
+                }
+                this.classList.add('active_');
+            } 
+        })
+    } 
+}
+console.log(advantages);
+
+// секция advantages
+
+function showFirstItem () {
+    document.querySelector('.first_item').classList.add('active')
+}
+function hideFirstItem () {
+    document.querySelector('.first_item').classList.remove('active')
+}
+function showSecondItem () {
+    document.querySelector('.second_item').classList.add('active')
+}
+function hideSecondItem () {
+    document.querySelector('.second_item').classList.remove('active')
+}
+function showThirdItem () {
+    document.querySelector('.third_item').classList.add('active')
+}
+function hideThirdItem () {
+    document.querySelector('.third_item').classList.remove('active')
+}
+function showFourthItem () {
+    document.querySelector('.fourth_item').classList.add('active')
+}
+function hideFourthItem () {
+    document.querySelector('.fourth_item').classList.remove('active')
+}
+function showFifthItem () {
+    document.querySelector('.fifth_item').classList.add('active')
+}
+function hideFifthItem () {
+    document.querySelector('.fifth_item').classList.remove('active')
+}

@@ -958,6 +958,14 @@ h6 {
     margin-top: 30px;
 }
 
+.first_item, .second_item, .third_item, .fourth_item, .fifth_item {
+    display: none;
+}
+
+.first_item.active, .second_item.active, .third_item.active, .fourth_item.active, .fifth_item.active {
+    display: block;
+}
+
 .advantages {
     align-items: center;
 }
@@ -969,20 +977,22 @@ h6 {
     font-size: 27px;
     line-height: 33px;
     color: #003AA6;
+    width: 650px;
+    height: 100px;
+    background-color: #ffffff;   
 }
 
-.active {
-    width: 678px;
+.advantage:hover {
+    width: 650px;
     height: 100px;
     background-color: #003AA6;
     color: #ffffff;
-    padding-left: 60px;
     align-items: center;
     clip-path: polygon(5% 0, 100% 0%, 100% 100%, 5% 100%, 0 54%);
 }
 
-.inactive {
-    margin-top: 25px;
+.advantage:hover img {
+    margin-left: 60px;
 }
 
 .advantage p {
@@ -1004,7 +1014,6 @@ h6 {
     .advantages_content_left p {
         font-size: 20px;
     }
-
     .active {
         width: 550px;
         height: 80px;

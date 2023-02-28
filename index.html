@@ -395,30 +395,51 @@
                     <div class="advantages_content">
                         <img src="img/vector2.png" alt="vector" class="vector2">
                         <div class="advantages_content_left">
-                            <h3>Big Data</h3>
-                            <p>Собранные за 20 лет данные о движении <br/> отдельно легковых и отдельно грузовых <br/> автомобилей позволяют нам всегда быть на <br/> шаг впереди по точности прогноза дорожного <br/> трафика на завтра. Это позволяет создавать <br/> для водителей  максимально напряженное,  но <br/> при этом гарантированно выполнимое <br/> задание.
-                            </p>
+                            <div class="first_item">
+                                <h3>Big Data</h3>
+                                <p>Собранные за 20 лет данные о движении <br/> отдельно легковых и отдельно грузовых <br/> автомобилей позволяют нам всегда быть на <br/> шаг впереди по точности прогноза дорожного <br/> трафика на завтра. Это позволяет создавать <br/> для водителей  максимально напряженное,  но <br/> при этом гарантированно выполнимое <br/> задание.</p>
+                            </div>
+                            <div class="second_item">
+                                <h3>Быстрая интеграция без рисков</h3>
+                                <p>Мы бережно относимся к  вашим бизнес- <br/>процессам, не  пытаемся их сломать. <br/>Построение сети маршрутов  параллельно <br/> выполняет наш  робот. Если вам понравится  <br/> результат – вы можете его  использовать <br/>постоянно. Если  нет – продолжаете работать <br/> как раньше. <br/>
+                                    Система Logimus легко  интегрируется с <br/> популярными  учетными ERP (1С, галактика, <br/>  WMS, SAP, CRM и т.д.)</p>
+                            </div>
+                            <div class="third_item">
+                                <h3>Преодоление сложностей доставки</h3>
+                                <p>Учёт строгих временных окон, <br/>
+                                    многодневных рейсов, приоритетности <br/> клиентов,совместимости и температурных <br/> режимов грузов, возврата тары, <br/>
+                                    промежуточных складов поставщиков, <br/> расположения роллетов, соответствия <br/> габаритов машин и площадок магазинов, <br/> высоты гидроборта и рампы склада, <br/> уменьшения потерь от возможного отказа <br/> клиента.</p>
+                            </div>
+                            <div class="fourth_item">
+                                <h3>Проектный подход </h3>
+                                <p>Вы формулируете задачу - остальное делает <br/> наша команда. Анализ особенностей бизнеса, <br/> консалтинг по внедрению лучших отраслевых <br/>практик, разработка и настройка софта, <br/> обучение, совместное выполнение <br/> логистического планирования в первый <br/>период. </p>
+                            </div>
+                            <div class="fifth_item">
+                                <h3>Готовые отрослевые решения</h3>
+                                <p>Опыт внедрения проектов в различных сферах <br/> позволяет предоставлять решения, которые в <br/> базовых настройках учитывают отраслевые <br/>особенности большинства бизнес-процессов.</p>
+                            </div>
+
                         </div>
                         <div class="advantages_content_right">
                             <div class="advantages">
-                                <div class="advantage active">
-                                    <img src="img/ico1.svg" alt="ico">
+                                <div class="advantage first_item_hover" onmouseover="showFirstItem()" onmouseout="hideFirstItem()">
+                                    <img src="img/ico1.png" alt="ico">
                                     <p>Big Data</p>
                                 </div>
-                                <div class="advantage inactive">
-                                    <img src="img/ico2.svg" alt="ico">
+                                <div class="advantage" onmouseover="showSecondItem()" onmouseout="hideSecondItem()">
+                                    <img src="img/ico2.png" alt="ico">
                                     <p>Быстрая интеграция без рисков</p>
                                 </div>
-                                <div class="advantage inactive">
-                                    <img src="img/ico3.svg" alt="ico">
+                                <div class="advantage" onmouseover="showThirdItem()" onmouseout="hideThirdItem()">
+                                    <img src="img/ico3.png" alt="ico">
                                     <p>Преодоление сложностей доставки</p>
                                 </div>
-                                <div class="advantage inactive">
-                                    <img src="img/ico4.svg" alt="ico">
+                                <div class="advantage" onmouseover="showFourthItem()" onmouseout="hideFourthItem()">
+                                    <img src="img/ico4.png" alt="ico">
                                     <p>Проектный подход</p>
                                 </div>
-                                <div class="advantage inactive">
-                                    <img src="img/ico5.svg" alt="ico">
+                                <div class="advantage" onmouseover="showFifthItem()" onmouseout="hideFifthItem()">
+                                    <img src="img/ico5.png" alt="ico">
                                     <p>Готовые отрослевые решения</p>
                                 </div>
                             </div>
@@ -464,8 +485,7 @@
                     </div>
                 </div>
             </section>
-        </main>
-        
+        </main>       
         <footer class="footer">
             <div class="footer_wrap">
                 <div class="footer_content">
@@ -497,7 +517,9 @@
                     </div>
                 </div>
             </div>           
-        </footer>      
+        </footer>  
+        
+        
         <!-- <span class="background-video js-video has-video" data-src="https://www.logimus.by/wp-content/uploads/2022/10/demo-new.mp4">
             <video loop="" muted="" autoplay="" autobuffer="" playsinline="">
                 <source src="https://www.logimus.by/wp-content/uploads/2022/10/demo-new.mp4" type="video/mp4;&quot;">
