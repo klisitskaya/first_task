@@ -15,17 +15,35 @@ header {
 .header_content {
     width: 90%;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 32px 0;
+}
+
+.nav_wrap {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.hamb {
+    display: none;
+}
+
+.popup{
+    display: none;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .nav_list {
     display: flex;
+    margin-right: 80px;
 }
 
-.nav_list a {
+.nav_list_item .list {
     text-decoration: none;
     color: #003AA6;
     font-weight: 600;
@@ -45,15 +63,114 @@ header {
     margin-right: 80px;
 }
 
-.header_number {
-    margin-right: 69px;
-    color: #003AA6;
-    font-weight: 600;
-    font-size: 20px;
+.list_service {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: 27px;
+    padding: 0;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    position: absolute;
+    max-width: 50%;
+    opacity: 0;
+    transform: translate(0px, -150%);
+    transition: all 0.8s ease 0s;
 }
 
-.header_contact a {
-    text-decoration: none;
+.show_submenu.pressed .list_service {
+    opacity: 1;
+    transform: translate(0px, 0px);
+} 
+
+.show_submenu.pressed .header_arrow {
+    transform: rotate(180deg);
+}
+
+.list_service .sub_list {
+    color: #6378eb;
+    font-size: 16px;
+    line-height: 140%;
+    padding: 16px 8px;
+    text-decoration: none;   
+}
+
+@media (max-width: 1050px) {
+    .navigation {
+        display: none;
+    }
+    .hamb {
+        display: flex;
+        align-items: center;
+    }
+    .hamb_line {
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 6px auto;
+        background-color: #003aa6;
+        border-radius: 5px;
+        transition: 0.2s;
+    }
+    .hamb_field {
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    .popup {
+        position: fixed;
+        top: 105px;
+        /* top: -100%; */
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #F2F5FE;
+        /* background-color: red; */
+        z-index: 100;
+        display: flex;
+        transition: 0.3s;
+    }
+    .popup.open {
+        /* top: 105px; */
+        left: 0;
+    }
+
+    .popup .nav_list {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding: 50px 0;
+        overflow: auto;
+    }
+    .popup .nav_list > li {
+        width: 100%;
+    }
+    .popup .nav_list > li > a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        align-items: center;
+    }
+    .header_arrow {
+        height: 10px;
+    }
+    .hamb_field.opened .hamb_line:nth-child(2) {
+        opacity: 0;
+    }
+    .hamb_field.opened .hamb_line:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+    .hamb_field.opened .hamb_line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    body.noscroll {
+        overflow: hidden;
+    }
+ 
+
 }
 
 .main_screen {
@@ -437,7 +554,8 @@ h2 {
     font-weight: 300;
     font-size: 20px;
     line-height: 24px;
-    color: #003AA6; 
+    color: #003AA6;
+    margin-bottom: 10px; 
 }
 
 .tasks_img img {
@@ -463,6 +581,32 @@ h5 {
 .task._active {
     transform: translate(0px, 0px);
     opacity: 1;
+}
+
+.line_block {
+    display: flex;
+    align-items: flex-start;
+    height: 10px;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+}
+
+.circle {
+    background: #14fcff;
+    border-radius: 50%;
+    box-shadow: 0 0 7px rgb(116 253 255 / 70%);
+    height: 10px;
+    width: 10px;
+}
+
+.line {
+    background: linear-gradient(90deg,#47fcff .74%,#74fdff 79.69%,rgba(116,253,255,0));
+    height: 1px;
+    position: relative;
+    top: 50%;
+    width: 100%;
+    max-width: 55%;
 }
 
 @media (max-width: 1800px) {
@@ -979,7 +1123,8 @@ h6 {
     color: #003AA6;
     width: 650px;
     height: 100px;
-    background-color: #ffffff;   
+    background-color: #ffffff;
+    transition: all 0.2s ease 0s; 
 }
 
 .advantage:hover {

@@ -1,3 +1,55 @@
+// header
+const hamb = document.querySelector('#hamb');
+const popup = document.querySelector('#popup');
+const menu = document.querySelector('#menu').cloneNode(1);
+const links = Array.from(menu.children);
+const body = document.body;
+
+const itemForSubmenu = document.querySelectorAll('.show_submenu');
+const listService = document.querySelector('.list_service');
+
+hamb.addEventListener('click', hambHandler)
+
+function hambHandler(e) {
+    e.preventDefault();
+    popup.classList.toggle('open')
+    hamb.classList.toggle('opened')
+    body.classList.toggle('noscroll')
+    renderPopup()
+}
+
+function renderPopup () {
+    popup.appendChild(menu)
+}
+
+links.forEach((link) => {
+    link.addEventListener('click', closeOnClick);
+  });
+  
+  function closeOnClick() {
+    popup.classList.remove('open');
+    hamb.classList.remove('opened');
+    body.classList.remove('noscroll');
+  }
+
+function showSubMenu() {
+    for (item of itemForSubmenu) {
+        item.addEventListener('click', function() {
+            if (this.classList.contains('pressed')) {
+                 this.classList.remove('pressed');
+            } else {
+                for(elem of itemForSubmenu) {
+                    elem.classList.remove('pressed');
+            }
+                this.classList.add('pressed');
+            } 
+        })
+    }
+}
+showSubMenu();
+
+// аниманция при скролле
+
 const animItems = document.querySelectorAll('._anim-items');
 
 if(animItems.length > 0) {
@@ -14,7 +66,6 @@ if(animItems.length > 0) {
             if (animItemHeight > window.innerHeight) {
                 animItemPoint = window.innerHeight - window.innerHeight / animStart;
             }
-
             if((pageYOffset > animItemOffset - animItemPoint) && pageYOffset - (animItemOffset + animItemHeight)) {
                 animItem.classList.add('_active')
             } else {
@@ -33,8 +84,7 @@ if(animItems.length > 0) {
 
     setTimeout(() => {
         animOnScroll()
-    }, 300);
-    
+    }, 300);  
 }
 
 const profitContentItem = document.querySelectorAll('.profit_content_item');
@@ -71,7 +121,6 @@ function showInfoAdvantage() {
         })
     } 
 }
-console.log(advantages);
 
 // секция advantages
 

@@ -14,27 +14,44 @@
     <div class="wrapper">
         <header class="header">
             <div class="header_content">
-                <div class="logo">
-                    <img src="img/logo.png" alt="logo" class="logo">
+                <div class="nav_wrap">
+                    <div class="logo">
+                        <img src="img/logo.png" alt="logo" class="logo">
+                    </div>                            
+                    <nav class="navigation">
+                        <ul class="nav_list" id="menu">
+                            <li class="nav_list_item show_submenu">
+                                <a href="#" class="list" >
+                                    <span>Сервисы</span>
+                                    <img src="img/icon.png" alt="arrow" class="header_arrow">
+                                </a>
+                                <div class="list_service">
+                                    <a href="#" class="sub_list">Рабочее место для логиста и диспетчера</a>
+                                    <a href="#" class="sub_list">Приложение для водителей и курьеров</a>
+                                    <a href="#" class="sub_list">Сервис для клиентов и партнеров</a>
+                                    <a href="#" class="sub_list">Сервис оптимальной маршрутизации</a>
+                                </div>                          
+                            </li>
+                            <li class="nav_list_item"><a href="#" class="list">Кейсы</a></li>
+                            <li class="nav_list_item"><a href="#" class="list">Новости</a></li>
+                            <li class="nav_list_item"><a href="#" class="list">Контакты</a></li>
+                            <li class="nav_list_item"><a href="#" class="list">+375 (29) 000-00-00</a></li>
+                        </ul>
+                    </nav>
+                    <div class="hamb">
+                        <div class="hamb_field" id="hamb">
+                            <span class="hamb_line"></span>
+                            <span class="hamb_line"></span>
+                            <span class="hamb_line"></span>
+                        </div>
+                    </div>
                 </div>
-                <nav class="navigation">
-                    <ul class="nav_list">
-                        <li>
-                            <a href="#">
-                                <span>Сервисы</span>
-                                <img src="img/icon.png" alt="arrow">
-                            </a>                          
-                        </li>
-                        <li><a href="#">Кейсы</a></li>
-                        <li><a href="#">Новости</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
-                </nav>
-                <div class="header_contact">                  
-                    <a href="tel:+375172705969" class="header_number"> +375 (29) 000-00-00 </a>
-                </div>
+                               
             </div>
         </header>
+        <div class="popup" id="popup">
+
+        </div>
         <main class="main">
             <section class="main_screen">
                 <div class="main_screen_wrap">
@@ -169,18 +186,34 @@
                         <div class="task _anim-items">
                             <h5>Экономия в среднем:</h5>
                             <p>Количества авто в доставке до 30% Времени доставки до 40% Времени логиста до 98% <br/> Пробегов до 50%</p>
+                            <div class="line_block">
+                                <div class="circle"></div>
+                                <div class="line"></div>
+                            </div>
                         </div>
                         <div class="task _anim-items">
                             <h5>Автоматизация</h5>
                             <p>труда логиста, позволяющая ему перейти к управлению затратами.</p>
+                            <div class="line_block">
+                                <div class="circle"></div>
+                                <div class="line"></div>
+                            </div>
                         </div>
                         <div class="task _anim-items">
                             <h5>Улучшение</h5>
                             <p>качества доставки без задержек и заблаговременное информирование клиента о прибытии.</p>
+                            <div class="line_block">
+                                <div class="circle"></div>
+                                <div class="line"></div>
+                            </div>
                         </div>
                         <div class="task _anim-items">
                             <h5>Демонстрация</h5>
                             <p>руководителю достигнутой экономии за счёт интелектуальных усилий логиста.</p>
+                            <div class="line_block">
+                                <div class="circle"></div>
+                                <div class="line"></div>
+                            </div>
                         </div> 
                     </div>
                 </div>
@@ -316,7 +349,7 @@
                         <form action="#" class="form_for_caculator">
                             <div class="input_box_1">                   
                                 <select name="" id="">
-                                    <option>В ручную на основе опыта логиста</option>
+                                    <option>Вручную на основе опыта логиста</option>
                                 </select>
                                 <p>Какую технологию распределения <br/>
                                     заказов на машину вы используете?</p>
@@ -388,7 +421,6 @@
                     </div>
                 </div>
             </section>
-            <!-- эту тоже еще не делала -->
             <section class="advantages">
                 <div class="advantages_wrap _anim-items">
                     <h2 class="_anim-items">Преимущества Logimus</h2>
